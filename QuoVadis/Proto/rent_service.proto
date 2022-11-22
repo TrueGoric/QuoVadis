@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+import "Proto/common.proto";
+
+option csharp_namespace = "QuoVadis.Proto";
+
+service Rent {
+	rpc GetAreas (GetAreasRequest) returns (GetAreasResponse);
+	rpc GetVehicles (GetVehiclesRequest) returns (GetVehiclesResponse);
+	rpc GetCurrentlyRentedVehicle (GetCurrentlyRentedVehicleRequest) returns (GetCurrentlyRentedVehicleResponse);
+	rpc BeginRent (BeginRentRequest) returns (BeginRentResponse);
+	rpc EndRent (EndRentRequest) returns (EndRentResponse);
+}
+
+message GetAreasRequest {}
+
+message GetAreasResponse {
+	repeated string areas = 1;
+}
+
+message GetVehiclesRequest {
+	string area = 1;
+}
+
+message GetVehiclesResponse {
+	repeated VehicleInfo vehicles = 1;
+}
+
+message GetCurrentlyRentedVehicleRequest {}
+
+message GetCurrentlyRentedVehicleResponse {
+	VehicleInfo vehicle = 1;
+}
+
+enum BeginRentStatus {
+	SUCCESSFULLY_RENTED = 0;
+	VEHICLE_IN_USE = 1;
+	VEHICLE_DOESNT_EXIST = 2;
+	INSUFFICIENT_FUNDS = 3;
+	RENT_IN_PROGRESS = 4;
+}
+
+message BeginRentRequest {
+	string registrationNumber = 1;
+}
+
+message BeginRentResponse {
+	BeginRentStatus status = 1;
+}
+
+enum EndRentStatus {
+	SUCCESSFULLY_ENDED_RENT = 0;
+	OUTSIDE_AREA = 1;
+	NO_VEHICLE_RENTED = 2;
+}
+
+message EndRentRequest {}
+
+message EndRentResponse {
+	EndRentStatus status = 1;
+	string paidAmount = 2;
+}

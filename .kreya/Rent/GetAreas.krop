@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "Rent.GetAreas"
+  },
+  "requests": [
+    {
+      "location": "GetAreas-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}

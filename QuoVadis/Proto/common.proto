@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "QuoVadis.Proto";
+
+message VehicleInfo {
+	string registration = 1;
+	string model = 2;
+	string costPerKilometer = 3;
+	Location location = 4;
+}
+
+message Location {
+	double latitude = 1;
+	double longitude = 2;
+}

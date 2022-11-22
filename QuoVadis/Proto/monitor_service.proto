@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "Proto/common.proto";
+
+option csharp_namespace = "QuoVadis.Proto";
+
+service Monitor {
+	rpc MonitorLocation (MonitorLocationRequest) returns (stream MonitorLocationEvent);
+}
+
+message MonitorLocationRequest {
+	string area = 1;
+}
+
+message MonitorLocationEvent {
+	string registrationNumber = 1;
+	Location location = 2;
+}

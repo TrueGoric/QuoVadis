@@ -1,0 +1,18 @@
+{
+  "details": {
+    "methodFqn": "User.CheckBalance",
+    "metadata": [
+      {
+        "key": "Cookie",
+        "value": ".AspNetCore.Cookies=CfDJ8M6p2RSJlINJrKVUTksVgNHmK_WUe-M2RJIBmuxrArBahbbvi-E-cgKroAD8nu2nc8OJ_CQ0sHfIpUwIncxLjhGTj-ZTR0k25XVIKnB7hYaEzRG0VMkqFvA3hFtBF8wquNJ4NZ4S2Ua-a8nxc2d5jNEPqZvWHpwpYQhqW_gLf7IAwcW9w1FYl6wYnUt3GxMvnSKzaGdGmeE-Xhbixhj8cDZFuABOdInFAvUPkCQS2iXXV8BezbzvVlT3TlgAIBr1yIQ_CJbh5Y8kcIcH_iJTB8vfdLYQPsDnGDBlz0Oj363-mUP0f0ev7JGxBdM4iUCWLySG41bYw9T5ZlWTb4dqzdfrP8P0auT9BRj19Rc0TMh1uZOYW-jC6bX7awzRC5kq77908vjiCbcByVp-lBGbTS8"
+      }
+    ]
+  },
+  "requests": [
+    {
+      "location": "CheckBalance-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}

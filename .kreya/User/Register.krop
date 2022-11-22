@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "User.Register"
+  },
+  "requests": [
+    {
+      "location": "Register-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}

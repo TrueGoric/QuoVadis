@@ -1,0 +1,21 @@
+{
+  "id": "843a2a13-cf38-4b7d-95eb-4f4d621459ea",
+  "importStreams": [
+    {
+      "id": "a9fbd08c-c9c2-42e6-bc5f-0c57d6a981e7",
+      "name": "proto-file",
+      "importerName": "ProtoFile",
+      "createMissingOperations": true,
+      "options": {
+        "files": [
+          "../QuoVadis/Proto"
+        ],
+        "importPaths": [
+          "../QuoVadis"
+        ]
+      }
+    }
+  ],
+  "authConfigs": [],
+  "certificates": []
+}

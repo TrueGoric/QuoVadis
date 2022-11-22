@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "Proto/common.proto";
+
+option csharp_namespace = "QuoVadis.Proto";
+
+service Vehicle {
+	rpc UpdatePosition (UpdatePositionRequest) returns (UpdatePositionResponse);
+}
+
+message UpdatePositionRequest {
+	string vehicle_registration = 1;
+	Location location = 2;
+}
+
+message UpdatePositionResponse {}

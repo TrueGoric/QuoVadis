@@ -1,0 +1,18 @@
+{
+  "details": {
+    "methodFqn": "Rent.GetVehicles",
+    "metadata": [
+      {
+        "key": "lol",
+        "value": "lol"
+      }
+    ]
+  },
+  "requests": [
+    {
+      "location": "GetVehicles-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}

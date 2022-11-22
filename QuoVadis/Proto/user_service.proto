@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+option csharp_namespace = "QuoVadis.Proto";
+
+service User {
+	rpc Register (RegisterRequest) returns (RegisterResponse);
+	rpc Login (LoginRequest) returns (LoginResponse);
+	rpc CheckBalance (CheckBalanceRequest) returns (CheckBalanceResponse);
+	rpc AddFunds (AddFundsRequest) returns (AddFundsResponse);
+}
+
+message RegisterRequest {
+	string username = 1;
+	string password = 2;
+}
+
+message RegisterResponse {
+	RegistrationResult result = 1;
+}
+
+enum RegistrationResult {
+	SUCCESSFULLY_REGISTERED = 0;
+	USERNAME_IN_USE = 1;
+}
+
+message LoginRequest {
+	string username = 1;
+	string password = 2;
+}
+
+message LoginResponse {
+	bool success = 1;
+}
+
+enum AddFundsResult {
+	SUCCESSFULLY_ADDED = 0;
+	INVALID_AMOUNT = 1;
+}
+
+message CheckBalanceRequest {}
+
+message CheckBalanceResponse {
+	string available = 1;
+	string total = 2;
+}
+
+message AddFundsRequest {
+	string amount = 1;
+}
+
+message AddFundsResponse {
+	AddFundsResult result = 1;
+}

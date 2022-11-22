@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "Vehicle.UpdatePosition"
+  },
+  "requests": [
+    {
+      "location": "UpdatePosition-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}

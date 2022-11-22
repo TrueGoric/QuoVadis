@@ -1,0 +1,13 @@
+{
+  "details": {
+    "methodFqn": "User.Login",
+    "metadata": []
+  },
+  "requests": [
+    {
+      "location": "Login-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}
